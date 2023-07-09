@@ -9,7 +9,7 @@ TODO
 $ git clone https://github.com/scaratek/rose
 $ cd rose
 $ npm i
-$ npms start (Configuration in config.js)
+$ npms start #Configuration in config.js
 ```
 
 ## Future
