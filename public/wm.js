@@ -96,10 +96,6 @@ function makeFullscreen(window) {
     });
 };
 
-// logging
-console.log(window.document.querySelector(".title-bar"));
-console.log(document.getElementById("taskbar-list"));
-
 // Closable Window
 function makeCloseable(targetWindow) {
     var closeButton = targetWindow.querySelector(".close-button");
