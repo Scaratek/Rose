@@ -1,5 +1,5 @@
 # RoseWM
-Window Manager Written In JS
+Window Manager Written in JS
 
 ## Features
 TODO
