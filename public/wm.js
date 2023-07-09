@@ -1,12 +1,12 @@
+// Load Windows
 window.onload = function() {
     var windows = document.querySelectorAll(".window");
     for (var i = 0; i < windows.length; i++) {
-        // Window Functionallity
         makeMovable(windows[i]);
         makeResizable(windows[i]);
         makeCloseable(windows[i]);
         makeFullscreen(windows[i]);
-    }
+    };
 };
 
 // Movable Window
@@ -26,7 +26,7 @@ function makeMovable(window) {
         currentY = e.clientY - initialY;
         window.style.left = currentX + "px";
         window.style.top = currentY + "px";
-    }
+    };
 
     document.addEventListener("mouseup", function() {
         document.removeEventListener("mousemove", moveWindow);
@@ -92,9 +92,9 @@ function makeFullscreen(window) {
             window.style.top = previousStyles.top;
             window.style.bottom = "";
             isFullscreen = false;
-        }
+        };
     });
-}
+};
 
 // logging
 console.log(window.document.querySelector(".title-bar"));
@@ -107,31 +107,4 @@ function makeCloseable(targetWindow) {
     closeButton.addEventListener("click", function() {
         targetWindow.style.display = "none";
     });
-}
-
-window.addEventListener('load', function() {
-    var taskbar = document.getElementById("taskbar");
-
-    document.addEventListener("mousemove", function(e) {
-        if (e.clientY > window.innerHeight - 50) {
-            taskbar.style.display = "block";
-        } else {
-            taskbar.style.display = "none";
-        }
-    });
-
-    // Taskbar
-    var taskbarList = document.getElementById("taskbar-list");
-    var taskbarButton = document.createElement("button");
-    taskbarButton.classList.add("taskbar-button");
-    taskbarButton.style.border = "2px solid black";
-    taskbarButton.style.borderRadius = "50%";
-    taskbarButton.setAttribute("id", "taskbar-button-" + targetWindow.id);
-    taskbarButton.addEventListener("click", function() {
-        if (targetWindow.style.display === "none") {
-            targetWindow.style.display = "block";
-        }
-    });
-
-    taskbarList.appendChild(taskbarButton);
-});
+};
