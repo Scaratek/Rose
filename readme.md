@@ -17,5 +17,5 @@ Currently RoseWM is just a static window\
 In the future I want it to be a node module you can install and use to make and customize windows
 
 ## Credit
-Base Window Manager - Ethonic
-Developer - Scaratek
+- Base Window Manager - Ethonic
+- Developer - Scaratek
