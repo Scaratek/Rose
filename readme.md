@@ -9,7 +9,7 @@ TODO
 $ git clone https://github.com/scaratek/rose
 $ cd rose
 $ npm i
-$ npms start #(defualt port is 3000)
+$ npms start (Configuration in config.js)
 ```
 
 ## Future
