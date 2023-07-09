@@ -1,0 +1,22 @@
+{
+    "name": "rosewm",
+    "version": "1.0.0",
+    "description": "Window Manager Written In NodeJS",
+    "main": "app.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/scaratek/rose.git"
+    },
+    "author": "scaratek",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/scaratek/rose/issues"
+    },
+    "homepage": "https://github.com/scaratek/rose#readme",
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
