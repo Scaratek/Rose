@@ -30,6 +30,8 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .window .title-bar .fullscreen-button {
@@ -46,6 +48,26 @@ body {
     right: 30px;
     cursor: pointer;
     color: red;
+}
+
+.window .title-bar .logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+}
+
+.window .title-bar .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.window .title-bar p {
+    margin-left: 27px;
 }
 
 .iframe {
