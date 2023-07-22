@@ -11,17 +11,31 @@
 <body>
     <script src="wm.js"></script>
 
+    <div id="taskbar">
+    </div>
+
     <div>
-        <div class="window">
+        <div class="window" id="window1">
             <div class="title-bar">
                 <div class="logo">
                     <img src="./logo.png" alt="Logo" width="5" height="5">
                 </div>
-                <p>Rose</p>
+                <p>Window 1</p>
                 <div class="fullscreen-button">&#9633;</div>
                 <div class="close-button">&#10006;</div>
             </div>
             <iframe id="app" src="/app" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+        <div class="window" id="window2">
+            <div class="title-bar">
+                <div class="logo">
+                    <img src="./logo.png" alt="Logo" width="5" height="5">
+                </div>
+                <p>Window 2</p>
+                <div class="fullscreen-button">&#9633;</div>
+                <div class="close-button">&#10006;</div>
+            </div>
+            <iframe id="app" src="/app2" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
 </body>

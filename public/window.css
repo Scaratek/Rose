@@ -77,3 +77,31 @@ body {
     height: 100%;
     box-sizing: border-box;
 }
+
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #2e081f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.taskbar-button {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #3a0d2a;
+}
+
+.taskbar-button:hover {
+    background-color: #4e1240;
+}
