@@ -1,7 +1,5 @@
-// Global variable to keep track of opened windows
 var openedWindows = [];
 
-// Load Windows and initialize the taskbar when the page loads
 window.onload = function() {
     var windows = document.querySelectorAll(".window");
     for (var i = 0; i < windows.length; i++) {
@@ -13,7 +11,6 @@ window.onload = function() {
     };
 };
 
-// Function to add a window to the taskbar
 function addToTaskbar(windowId) {
     if (!openedWindows.includes(windowId)) {
         openedWindows.push(windowId);
@@ -21,7 +18,6 @@ function addToTaskbar(windowId) {
     }
 }
 
-// Function to remove a window from the taskbar
 function removeFromTaskbar(windowId) {
     var index = openedWindows.indexOf(windowId);
     if (index !== -1) {
@@ -30,19 +26,17 @@ function removeFromTaskbar(windowId) {
     }
 }
 
-// Function to update the taskbar element
 function updateTaskbar() {
     var taskbarElement = document.getElementById("taskbar");
-    taskbarElement.innerHTML = ""; // Clear existing taskbar content
+    taskbarElement.innerHTML = "";
 
-    // Create and add buttons for each opened window
     openedWindows.forEach(function(windowId) {
         var windowButton = document.createElement("div");
         windowButton.textContent = document.getElementById(windowId).querySelector(".title-bar p").textContent;
         windowButton.classList.add("taskbar-button");
         windowButton.addEventListener("click", function() {
             if (document.getElementById(windowId).style.display === "none") {
-                document.getElementById(windowId).style.display = "block"; // Re-open the window if it's closed
+                document.getElementById(windowId).style.display = "block"; 
             }
             focusWindow(windowId);
         });
@@ -50,16 +44,14 @@ function updateTaskbar() {
     });
 }
 
-// Function to focus on a specific window when its button is clicked in the taskbar
 function focusWindow(windowId) {
     var windows = document.querySelectorAll(".window");
     for (var i = 0; i < windows.length; i++) {
-        windows[i].style.zIndex = "1"; // Lower z-index for all windows
+        windows[i].style.zIndex = "1";
     }
-    document.getElementById(windowId).style.zIndex = "999"; // Raise z-index for the clicked window
+    document.getElementById(windowId).style.zIndex = "999";
 }
 
-// Movable Window
 function makeMovable(window) {
     var titleBar = window.querySelector(".title-bar");
     var initialX, initialY, currentX, currentY;
@@ -83,7 +75,6 @@ function makeMovable(window) {
     });
 }
 
-// Resizable Window
 function makeResizable(window) {
     var handle = document.createElement("div");
     handle.style.position = "absolute";
@@ -117,7 +108,6 @@ function makeResizable(window) {
     });
 }
 
-// Fullscreen Window
 function makeFullscreen(window) {
     var fullscreenButton = window.querySelector(".fullscreen-button");
     var isFullscreen = false;
