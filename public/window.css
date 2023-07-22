@@ -37,7 +37,7 @@ body {
 .window .title-bar .fullscreen-button {
     position: absolute;
     top: 5px;
-    right: 15px;
+    right: 40px;
     cursor: pointer;
     color: white;
 }
@@ -45,7 +45,7 @@ body {
 .window .title-bar .close-button {
     position: absolute;
     top: 5px;
-    right: 30px;
+    right: 15px;
     cursor: pointer;
     color: red;
 }
